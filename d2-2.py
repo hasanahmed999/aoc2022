@@ -27,10 +27,10 @@ with open('inputs/d2-1.txt') as file:
             total_points += draw_pts
         else:
             # edge case
-            if opp_choice == 'Scissors':
-                player_choice = 'Rock'
-            else:
-                player_choice = RPS[ RPS.index(opp_choice) + 1 ]
+            # if opp_choice == 'Scissors':
+            #     player_choice = 'Rock'
+            # else:
+            player_choice = RPS[( RPS.index(opp_choice) + 1) % 3]
             total_points += choice_points[player_choice]
             total_points += win_pts
 
